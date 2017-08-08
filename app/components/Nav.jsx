@@ -1,7 +1,7 @@
-const React = require('react');
-const {Link, IndexLink} = require('react-router');
+var React = require('react');
+var {Link, IndexLink} = require('react-router');
 
-const Nav = () => {
+var Nav = () => {
     return(
         <div>
             <h1>Nav</h1>

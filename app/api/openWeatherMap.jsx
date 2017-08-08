@@ -1,11 +1,11 @@
-const axios = require('axios');
+var axios = require('axios');
 
-const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?&appid=8c1d65e68c0208e9360ab6271bd25cf2&units=metric';
+var OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?&appid=8c1d65e68c0208e9360ab6271bd25cf2&units=metric';
 
 module.exports = {
     getTemp: function (location) {
-        const encodedLocation = encodeURIComponent(location);
-        const requestUrl = `${OPEN_WEATHER_MAP_URL}&q=${encodedLocation}`;
+        var encodedLocation = encodeURIComponent(location);
+        var requestUrl = `${OPEN_WEATHER_MAP_URL}&q=${encodedLocation}`;
 
         return axios.get(requestUrl).then(function (res) {
             if (res.data.cod && res.data.message){

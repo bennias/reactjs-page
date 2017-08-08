@@ -1,6 +1,6 @@
-const React = require('react');
+var React = require('react');
 
-const WeatherMessage = ({temp, location}) => {
+var WeatherMessage = ({temp, location}) => {
     return(
         <h3>It's {temp} in {location}</h3>
     )

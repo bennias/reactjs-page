@@ -1,16 +1,16 @@
-const React = require('react');
-const WeatherForm = require('WeatherForm');
-const WeatherMessage = require('WeatherMessage');
-const openWeatherMap = require('openWeatherMap');
+var React = require('react');
+var WeatherForm = require('WeatherForm');
+var WeatherMessage = require('WeatherMessage');
+var openWeatherMap = require('openWeatherMap');
 
-const Weather = React.createClass({
+var Weather = React.createClass({
     getInitialState: function () {
         return{
             isLoading: false
         }
     },
     handleSearch: function (location) {
-        const that = this;
+        var that = this;
 
         this.setState({isLoading:true});
 
@@ -26,7 +26,7 @@ const Weather = React.createClass({
         })
     },
     render:function () {
-        const {isLoading, temp, location} = this.state;
+        var {isLoading, temp, location} = this.state;
 
         function renderMessage() {
             if (isLoading){

@@ -1,6 +1,6 @@
-const React = require('react');
+var React = require('react');
 
-const About = (props) => {
+var About = (props) => {
     return(
         <h3>About Component</h3>
     )

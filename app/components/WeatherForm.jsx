@@ -1,6 +1,6 @@
-const React = require('react');
+var React = require('react');
 
-const WeatherForm = React.createClass({
+var WeatherForm = React.createClass({
     onFormSubmit: function (e) {
         e.preventDefault();
 
