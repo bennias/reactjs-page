@@ -114,7 +114,7 @@
 	$(document).foundation();
 
 	// app.css
-	__webpack_require__(270);
+	__webpack_require__(268);
 
 	ReactDOM.render(React.createElement(
 	    Router,
@@ -25530,12 +25530,12 @@
 
 	    onSearch: function onSearch(e) {
 	        e.preventDefault();
-	        alert('Not yet');
+	        alert('Menu-search is not defined');
 	    },
 	    render: function render() {
 	        return React.createElement(
 	            'div',
-	            { className: 'top-bar' },
+	            { className: 'top-bar navbar' },
 	            React.createElement(
 	                'div',
 	                { className: 'top-bar-left' },
@@ -25545,14 +25545,14 @@
 	                    React.createElement(
 	                        'li',
 	                        { className: 'menu-text' },
-	                        'Hacktiv'
+	                        'hacktiv'
 	                    ),
 	                    React.createElement(
 	                        'li',
 	                        null,
 	                        React.createElement(
 	                            IndexLink,
-	                            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            { to: '/', activeClassName: 'active' },
 	                            'Get Weather'
 	                        )
 	                    ),
@@ -25561,7 +25561,7 @@
 	                        null,
 	                        React.createElement(
 	                            Link,
-	                            { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            { to: '/about', activeClassName: 'active' },
 	                            'About'
 	                        )
 	                    ),
@@ -25570,7 +25570,7 @@
 	                        null,
 	                        React.createElement(
 	                            Link,
-	                            { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            { to: '/examples', activeClassName: 'active' },
 	                            'Examples'
 	                        )
 	                    )
@@ -25702,11 +25702,7 @@
 	                'form',
 	                { onSubmit: this.onFormSubmit },
 	                React.createElement('input', { type: 'search', ref: 'location', placeholder: 'Search Weather by City' }),
-	                React.createElement(
-	                    'button',
-	                    { 'class': 'hollow button' },
-	                    'Get Weather'
-	                )
+	                React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
 	            )
 	        );
 	    }
@@ -25726,11 +25722,15 @@
 	        location = _ref.location;
 
 	    return React.createElement(
-	        'h3',
+	        'h4',
 	        null,
-	        'It\'s ',
-	        temp,
-	        ' in ',
+	        'Es sind ',
+	        React.createElement(
+	            'strong',
+	            null,
+	            temp
+	        ),
+	        '\xB0C in ',
 	        location
 	    );
 	};
@@ -27324,7 +27324,7 @@
 	        React.createElement(
 	            "p",
 	            null,
-	            "This Page is build with:"
+	            "This Page was build with:"
 	        ),
 	        React.createElement(
 	            "ul",
@@ -27997,15 +27997,13 @@
 
 
 /***/ }),
-/* 268 */,
-/* 269 */,
-/* 270 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(271);
+	var content = __webpack_require__(269);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// Prepare cssTransformation
 	var transform;
@@ -28030,7 +28028,7 @@
 	}
 
 /***/ }),
-/* 271 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(265)(undefined);
@@ -28038,7 +28036,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\ninput[type=search] {\n  box-shadow: none; }\n", ""]);
+	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\ninput[type=search] {\n  box-shadow: none; }\n\ninput[type=submit] {\n  box-shadow: none;\n  background-color: #fefefe;\n  border: 1px solid #4fc08d;\n  color: #4fc08d; }\n  input[type=submit]:hover {\n    background-color: #4fc08d;\n    border: 1px solid #4fc08d;\n    color: #fefefe; }\n\n.top-bar, .top-bar ul {\n  background-color: #fefefe;\n  color: rgba(17, 17, 17, 0.4); }\n  .top-bar a, .top-bar ul a {\n    color: rgba(17, 17, 17, 0.4); }\n    .top-bar a.active, .top-bar ul a.active {\n      font-weight: 500;\n      color: #111; }\n\nbody {\n  background-color: #F2F3F7;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif; }\n\n.menu-text {\n  color: #4fc08d; }\n\na {\n  color: #4fc08d; }\n", ""]);
 
 	// exports
 

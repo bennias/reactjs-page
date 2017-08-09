@@ -1,4 +1,10 @@
 $space-large: 2.5rem;
+$costumWhite: #fefefe;
+$lightGrey: #F2F3F7;
+$activeColor: #4fc08d;
+$costumBlack: #111;
+$disabled: rgba(17, 17, 17, 0.4);
+$fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 .page-title {
     margin-top: $space-large;
@@ -6,4 +12,39 @@ $space-large: 2.5rem;
 }
 input[type=search]{
     box-shadow: none;
+}
+input[type=submit]{
+    box-shadow: none;
+    background-color: $costumWhite;
+    border: 1px solid $activeColor;
+    color: $activeColor;
+
+    &:hover{
+        background-color: $activeColor;
+        border: 1px solid $activeColor;
+        color: $costumWhite;
+    }
+}
+.top-bar, .top-bar ul {
+    background-color: $costumWhite;
+    color: $disabled;
+
+    a{
+        color: $disabled;
+        &.active{
+            font-weight: 500;
+            color: $costumBlack;
+        }
+    }
+}
+
+body{
+    background-color: $lightGrey;
+    font-family: $fontFamily;
+}
+.menu-text {
+    color: #4fc08d;
+}
+a {
+    color: $activeColor;
 }

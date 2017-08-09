@@ -4,22 +4,22 @@ var {Link, IndexLink} = require('react-router');
 var Nav = React.createClass({
     onSearch: function(e){
         e.preventDefault();
-        alert('Not yet')
+        alert('Menu-search is not defined')
     },
     render: function(){
         return(
-            <div className="top-bar">
+            <div className="top-bar navbar">
                 <div className="top-bar-left">
                     <ul className="menu">
-                        <li className="menu-text">Hacktiv</li>
+                        <li className="menu-text">hacktiv</li>
                         <li>
-                            <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink>
+                            <IndexLink to="/" activeClassName="active">Get Weather</IndexLink>
                         </li>
                         <li>
-                            <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link>
+                            <Link to="/about" activeClassName="active">About</Link>
                         </li>
                         <li>
-                            <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link>
+                            <Link to="/examples" activeClassName="active">Examples</Link>
                         </li>
                     </ul>
                 </div>

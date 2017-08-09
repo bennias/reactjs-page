@@ -5,7 +5,7 @@ var About = (props) => {
         <div>
             <h1 className="text-center page-title">About Me</h1>
             <p>Hey there, it's <strong>Hacktiv</strong>!</p>
-            <p>This Page is build with:</p>
+            <p>This Page was build with:</p>
             <ul>
                 <li>
                     <a href="https://facebook.github.io/react" target="_blank">React </a> - Javascript framework used.
