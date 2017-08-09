@@ -27187,9 +27187,18 @@
 
 	var About = function About(props) {
 	    return React.createElement(
-	        'h3',
+	        'div',
 	        null,
-	        'About Component'
+	        React.createElement(
+	            'h3',
+	            null,
+	            'About'
+	        ),
+	        React.createElement(
+	            'p',
+	            null,
+	            'It\'s Hacktiv!'
+	        )
 	    );
 	};
 	module.exports = About;
