@@ -1,43 +1,31 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
 
-var Nav = React.createClass({
-    onSearch: function(e){
-        e.preventDefault();
-        alert('Menu-search is not defined')
-    },
-    render: function(){
-        return(
-            <div className="top-bar navbar">
-                <div className="top-bar-left">
-                    <ul className="menu">
-                        <li className="menu-text">hacktiv</li>
-                        <li>
-                            <IndexLink to="/" activeClassName="active">Get Weather</IndexLink>
-                        </li>
-                        <li>
-                            <Link to="/about" activeClassName="active">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/examples" activeClassName="active">Examples</Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="top-bar-right">
-                    <form onSubmit={this.onSearch}>
-                        <ul className="menu">
-                            <li>
-                                <input type="search" placeholder="Search Weather by City"/>
-                            </li>
-                            <li>
-                                <input type="submit" className="button" value="Get Weather"/>
-                            </li>
-                        </ul>
-                    </form>
-                </div>
+var Nav = (props) => {
+    return(
+        <div className="top-bar navbar">
+            <div className="top-bar-left">
+                <ul className="menu">
+                    <li className="menu-text">
+                        BAS
+                    </li>
+                </ul>
             </div>
-        );
-    }
-});
+            <div className="top-bar-right">
+                <ul className="menu">
+                    <li>
+                        <IndexLink to="/" activeClassName="active">Get Weather</IndexLink>
+                    </li>
+                    <li>
+                        <Link to="/about" activeClassName="active">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/examples" activeClassName="active">Examples</Link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    )
+};
 
 module.exports = Nav;

@@ -1,3 +1,5 @@
+// Variables
+
 $space-large: 2.5rem;
 $costumWhite: #fefefe;
 $lightGrey: #F2F3F7;
@@ -6,9 +8,32 @@ $costumBlack: #111;
 $disabled: rgba(17, 17, 17, 0.4);
 $fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
-.page-title {
-    margin-top: $space-large;
-    margin-bottom: $space-large;
+// Overwrites
+body{
+    background-color: $lightGrey;
+    font-family: $fontFamily;
+    text-rendering: optimizeLegibility;
+}
+a {
+    color: $activeColor;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fontFamily;
+    text-rendering: optimizeLegibility;
+}
+.top-bar, .top-bar ul {
+    background-color: $costumWhite;
+    color: $disabled;
+        a{
+            color: $disabled;
+            &.active{
+                font-weight: 500;
+                color: $costumBlack;
+            }
+            &:hover{
+                color: $activeColor;
+            }
+        }
 }
 input[type=search]{
     box-shadow: none;
@@ -19,32 +44,19 @@ input[type=submit]{
     border: 1px solid $activeColor;
     color: $activeColor;
 
-    &:hover{
+    &:hover, &:focus{
         background-color: $activeColor;
         border: 1px solid $activeColor;
         color: $costumWhite;
     }
 }
-.top-bar, .top-bar ul {
-    background-color: $costumWhite;
-    color: $disabled;
-
-    a{
-        color: $disabled;
-        &.active{
-            font-weight: 500;
-            color: $costumBlack;
-        }
-    }
-}
-
-body{
-    background-color: $lightGrey;
-    font-family: $fontFamily;
+.page-title {
+    margin-top: $space-large;
+    margin-bottom: $space-large;
 }
 .menu-text {
-    color: #4fc08d;
-}
-a {
     color: $activeColor;
+}
+#access{
+    text-align: center;
 }

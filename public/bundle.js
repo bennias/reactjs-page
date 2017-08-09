@@ -25498,7 +25498,7 @@
 	    return React.createElement(
 	        'div',
 	        null,
-	        React.createElement(Nav, null),
+	        React.createElement(Nav, { id: 'access' }),
 	        React.createElement(
 	            'div',
 	            { className: 'row' },
@@ -25525,82 +25525,60 @@
 	    Link = _require.Link,
 	    IndexLink = _require.IndexLink;
 
-	var Nav = React.createClass({
-	    displayName: 'Nav',
-
-	    onSearch: function onSearch(e) {
-	        e.preventDefault();
-	        alert('Menu-search is not defined');
-	    },
-	    render: function render() {
-	        return React.createElement(
+	var Nav = function Nav(props) {
+	    return React.createElement(
+	        'div',
+	        { className: 'top-bar navbar' },
+	        React.createElement(
 	            'div',
-	            { className: 'top-bar navbar' },
+	            { className: 'top-bar-left' },
 	            React.createElement(
-	                'div',
-	                { className: 'top-bar-left' },
+	                'ul',
+	                { className: 'menu' },
 	                React.createElement(
-	                    'ul',
-	                    { className: 'menu' },
-	                    React.createElement(
-	                        'li',
-	                        { className: 'menu-text' },
-	                        'hacktiv'
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            IndexLink,
-	                            { to: '/', activeClassName: 'active' },
-	                            'Get Weather'
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            Link,
-	                            { to: '/about', activeClassName: 'active' },
-	                            'About'
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            Link,
-	                            { to: '/examples', activeClassName: 'active' },
-	                            'Examples'
-	                        )
-	                    )
+	                    'li',
+	                    { className: 'menu-text' },
+	                    'BAS'
 	                )
-	            ),
+	            )
+	        ),
+	        React.createElement(
+	            'div',
+	            { className: 'top-bar-right' },
 	            React.createElement(
-	                'div',
-	                { className: 'top-bar-right' },
+	                'ul',
+	                { className: 'menu' },
 	                React.createElement(
-	                    'form',
-	                    { onSubmit: this.onSearch },
+	                    'li',
+	                    null,
 	                    React.createElement(
-	                        'ul',
-	                        { className: 'menu' },
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement('input', { type: 'search', placeholder: 'Search Weather by City' })
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
-	                        )
+	                        IndexLink,
+	                        { to: '/', activeClassName: 'active' },
+	                        'Get Weather'
+	                    )
+	                ),
+	                React.createElement(
+	                    'li',
+	                    null,
+	                    React.createElement(
+	                        Link,
+	                        { to: '/about', activeClassName: 'active' },
+	                        'About'
+	                    )
+	                ),
+	                React.createElement(
+	                    'li',
+	                    null,
+	                    React.createElement(
+	                        Link,
+	                        { to: '/examples', activeClassName: 'active' },
+	                        'Examples'
 	                    )
 	                )
 	            )
-	        );
-	    }
-	});
+	        )
+	    );
+	};
 
 	module.exports = Nav;
 
@@ -28036,7 +28014,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\ninput[type=search] {\n  box-shadow: none; }\n\ninput[type=submit] {\n  box-shadow: none;\n  background-color: #fefefe;\n  border: 1px solid #4fc08d;\n  color: #4fc08d; }\n  input[type=submit]:hover {\n    background-color: #4fc08d;\n    border: 1px solid #4fc08d;\n    color: #fefefe; }\n\n.top-bar, .top-bar ul {\n  background-color: #fefefe;\n  color: rgba(17, 17, 17, 0.4); }\n  .top-bar a, .top-bar ul a {\n    color: rgba(17, 17, 17, 0.4); }\n    .top-bar a.active, .top-bar ul a.active {\n      font-weight: 500;\n      color: #111; }\n\nbody {\n  background-color: #F2F3F7;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif; }\n\n.menu-text {\n  color: #4fc08d; }\n\na {\n  color: #4fc08d; }\n", ""]);
+	exports.push([module.id, "body {\n  background-color: #F2F3F7;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n  text-rendering: optimizeLegibility; }\n\na {\n  color: #4fc08d; }\n\nh1, h2, h3, h4, h5, h6 {\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n  text-rendering: optimizeLegibility; }\n\n.top-bar, .top-bar ul {\n  background-color: #fefefe;\n  color: rgba(17, 17, 17, 0.4); }\n  .top-bar a, .top-bar ul a {\n    color: rgba(17, 17, 17, 0.4); }\n    .top-bar a.active, .top-bar ul a.active {\n      font-weight: 500;\n      color: #111; }\n    .top-bar a:hover, .top-bar ul a:hover {\n      color: #4fc08d; }\n\ninput[type=search] {\n  box-shadow: none; }\n\ninput[type=submit] {\n  box-shadow: none;\n  background-color: #fefefe;\n  border: 1px solid #4fc08d;\n  color: #4fc08d; }\n  input[type=submit]:hover, input[type=submit]:focus {\n    background-color: #4fc08d;\n    border: 1px solid #4fc08d;\n    color: #fefefe; }\n\n.page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\n.menu-text {\n  color: #4fc08d; }\n\n#access {\n  text-align: center; }\n", ""]);
 
 	// exports
 
