@@ -3,8 +3,20 @@ var React = require('react');
 var About = (props) => {
     return(
         <div>
-            <h3>About</h3>
-            <p>It's Hacktiv!</p>
+            <h1 className="text-center page-title">About Me</h1>
+            <p>Hey there, it's <strong>Hacktiv</strong>!</p>
+            <p>This Page is build with:</p>
+            <ul>
+                <li>
+                    <a href="https://facebook.github.io/react" target="_blank">React </a> - Javascript framework used.
+                </li>
+                <li>
+                    <a href="http://foundation.zurb.com/" target="_blank">Foundation </a> - CSS framework used.
+                </li>
+                <li>
+                    <a href="http://openweathermap.org" target="_blank">Open Weather Map </a> - Used API to search for Weather.
+                </li>
+            </ul>
         </div>
     )
 };
