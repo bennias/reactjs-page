@@ -25565,15 +25565,6 @@
 	                        { to: '/about', activeClassName: 'active' },
 	                        'About'
 	                    )
-	                ),
-	                React.createElement(
-	                    'li',
-	                    null,
-	                    React.createElement(
-	                        Link,
-	                        { to: '/examples', activeClassName: 'active' },
-	                        'Examples'
-	                    )
 	                )
 	            )
 	        )
@@ -27295,7 +27286,7 @@
 	            React.createElement(
 	                "strong",
 	                null,
-	                "Hacktiv"
+	                "Benni"
 	            ),
 	            "!"
 	        ),
@@ -27335,7 +27326,7 @@
 	                    { href: "http://openweathermap.org", target: "_blank" },
 	                    "Open Weather Map "
 	                ),
-	                " - Used API to search for Weather."
+	                " - Weather-API used."
 	            )
 	        )
 	    );

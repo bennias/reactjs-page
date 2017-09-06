@@ -19,9 +19,6 @@ var Nav = (props) => {
                     <li>
                         <Link to="/about" activeClassName="active">About</Link>
                     </li>
-                    <li>
-                        <Link to="/examples" activeClassName="active">Examples</Link>
-                    </li>
                 </ul>
             </div>
         </div>

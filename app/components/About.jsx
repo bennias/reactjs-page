@@ -4,7 +4,7 @@ var About = (props) => {
     return(
         <div>
             <h1 className="text-center page-title">About Me</h1>
-            <p>Hey there, it's <strong>Hacktiv</strong>!</p>
+            <p>Hey there, it's <strong>Benni</strong>!</p>
             <p>This Page was build with:</p>
             <ul>
                 <li>
@@ -14,7 +14,7 @@ var About = (props) => {
                     <a href="http://foundation.zurb.com/" target="_blank">Foundation </a> - CSS framework used.
                 </li>
                 <li>
-                    <a href="http://openweathermap.org" target="_blank">Open Weather Map </a> - Used API to search for Weather.
+                    <a href="http://openweathermap.org" target="_blank">Open Weather Map </a> - Weather-API used.
                 </li>
             </ul>
         </div>
